@@ -37,6 +37,19 @@
   }
 }
 
+.dropdown {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.dropdown-navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 75px;
+}
+
 .logo-center {
   display: block;
   margin-left: auto;
