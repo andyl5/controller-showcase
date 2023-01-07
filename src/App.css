@@ -37,8 +37,11 @@
   }
 }
 
-.dropdown {
-  background-color: white;
+.logo-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}.dropdown {
   height: 100%;
   width: 100%;
 }
@@ -50,8 +53,18 @@
   height: 75px;
 }
 
-.logo-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.dropdown-menu {
+  border: solid 4px blue; 
+  width: 250px;
+  color: white;
+  background-color: skyblue;
+}
+
+.dropdown-menu-h3 {
+  background-color: skyblue;
+  padding-left: 10px;
+}
+
+.dropdown-menu-h3:hover {
+  background-color: yellow;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import Dropdownmenu from "./Dropdownmenu";
 
 function Dropdownbar() {
     return (
@@ -10,6 +11,7 @@ function Dropdownbar() {
                 <button className="dropdown" type="button">Click Me!</button>
                 <button className="dropdown" type="button">Click Me!</button>
             </div>
+            <Dropdownmenu/>
         </div>
     )
 }
