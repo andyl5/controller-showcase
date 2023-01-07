@@ -4,7 +4,7 @@ import logo from "../images/logo.png"
 function Navbar(){
     return (
         <div>
-            <img src={logo}></img>
+            <img className="logo-center" src={logo}></img>
         </div>
     )
 }
