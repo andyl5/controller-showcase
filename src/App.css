@@ -57,14 +57,14 @@
   border: solid 4px blue; 
   width: 250px;
   color: white;
-  background-color: skyblue;
+  background-color: purple;
 }
 
 .dropdown-menu-h3 {
-  background-color: skyblue;
+  background-color: purple;
   padding-left: 10px;
 }
 
 .dropdown-menu-h3:hover {
-  background-color: yellow;
+  background-color: magenta;
 }
