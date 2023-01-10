@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import Dropdownmenu from "./Dropdownmenu";
 
 function NavbarButton() {
@@ -8,14 +8,29 @@ function NavbarButton() {
         setMenuOpen(!menuOpen)
     };
 
+    let menuRef = useRef();
+
+    useEffect(() => {
+        let handler = (e) => {
+            if (!menuRef.current.contains(e.target)){
+                setMenuOpen(false);
+            }
+        };
+    document.addEventListener("mousedown", handler);
+
+    // return () => {
+    //     document.removeEventListener();
+    // }
+    })
+
     return (
         <div>
-            <button 
-            onClick={handleMenuOpen}>Nintendo</button>
-            
-            {menuOpen ? (
-                <Dropdownmenu/>
-            ) : null}
+            <div ref={menuRef}>
+                <button onClick={handleMenuOpen}>Nintendo</button>
+                {menuOpen ? (
+                    <Dropdownmenu/>
+                    ) : null}
+            </div>
         </div>
     )
 }
