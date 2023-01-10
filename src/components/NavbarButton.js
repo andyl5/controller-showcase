@@ -3,24 +3,19 @@ import Dropdownmenu from "./Dropdownmenu";
 
 function NavbarButton() {
 
-    const [isMenuVisible, setMenuVisible] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const handleMenuOpen = () => {
+        setMenuOpen(!menuOpen)
+    };
 
     return (
         <div>
-            <button
-                // onMouseEnter={() => setButtonVisible(true)}
-                // onMouseLeave={() => setMenuVisible(false)}
-                onClick={() => {
-                    setMenuVisible(!isMenuVisible)
-                }}
-            >Nintendo</button>
-
-            {isMenuVisible && (
-                <Dropdownmenu
-                onMouseLeave={() => setMenuVisible(false)}
-                />
-            )}
-
+            <button 
+            onClick={handleMenuOpen}>Nintendo</button>
+            
+            {menuOpen ? (
+                <Dropdownmenu/>
+            ) : null}
         </div>
     )
 }
