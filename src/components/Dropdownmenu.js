@@ -1,15 +1,30 @@
 import React from "react";
+import data from "../data";
 
-function Dropdownmenu() {    
+function Dropdownmenu(props) {    
     return (
-        <div>
-            <div className="dropdown-menu">
-                <h3 className="dropdown-menu-h3">Gameboy</h3>
-                <h3 className="dropdown-menu-h3">DSi</h3>
-                <h3 className="dropdown-menu-h3">Wii</h3>
-                <h3 className="dropdown-menu-h3">Nintendo Switch</h3>
-                <h3 className="dropdown-menu-h3">Gameboy Connect Cube</h3>
-            </div>
+        // <div className="dropdown-menu">
+        //     <ul className="dropdown-menu-content-ul">
+        //         <div className="dropdown-menu-content">
+        //             <li className="dropdown-menu-content">Gameboy</li>
+        //             <li className="dropdown-menu-content">DSi</li>
+        //             <li className="dropdown-menu-content">Wii</li>
+        //             <li className="dropdown-menu-content">Nintendo Switch</li>
+        //             <li className="dropdown-menu-content">Gameboy Connect Cube</li>
+        //         </div>
+        //     </ul>
+        // </div>
+
+
+        <div className="dropdown-menu">
+            <ul className="dropdown-menu-content-ul">
+                {data.map((data, key) => {
+                    return (
+                        <li className="dropdown-menu-content" key={key}>{data.systems}</li>
+                    )
+                })}
+            </ul>
+
         </div>
     )
 }

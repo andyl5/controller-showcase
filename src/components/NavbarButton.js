@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from "react";
 import Dropdownmenu from "./Dropdownmenu";
 
-function NavbarButton() {
+function NavbarButton(props) {
 
     const [menuOpen, setMenuOpen] = useState(false);
     const handleMenuOpen = () => {
@@ -17,16 +17,12 @@ function NavbarButton() {
             }
         };
     document.addEventListener("mousedown", handler);
-
-    // return () => {
-    //     document.removeEventListener();
-    // }
     })
 
     return (
         <div>
             <div ref={menuRef}>
-                <button onClick={handleMenuOpen}>Nintendo</button>
+                <button className="dropdown-button" onClick={handleMenuOpen}>{props.name}</button>
                 {menuOpen ? (
                     <Dropdownmenu/>
                     ) : null}
