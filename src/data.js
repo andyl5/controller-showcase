@@ -1,30 +1,84 @@
-// Placeholder data
-
 const data = [
-    // {
-    //     id: 1,
-    //     title: "Life Lessons with Katie Zaferes",
-    //     description: "I will share with you what I call \"Positively Impactful Moments of Disappointment.\" Throughout my career, many of my highest moments only came after setbacks and losses. But learning from those difficult moments is what gave me the ability to rise above them and reach my goals.",
-    //     price: 136,
-    //     coverImg: "katie-zaferes.png",
-    //     stats: {
-    //         rating: 5.0,
-    //         reviewCount: 6
-    //     },
-    //     location: "Online",
-    //     openSpots: 0,
-    // },
+
 
     {
-        brand: "Nintendo",
-        // systems: ["Gamecube", "DS Lite", "Wii", "Wii U", "Nintendo Switch"],
-        system: {"name": "Gamecube"}
+        "brand": "Nintendo",
+        "consoles": [
+            {
+                "name": "Gamecube",
+            },
+            {
+                "name": "Wii"
+            },
+            {
+                
+                "name": "Wii U"
+            },
+            {
+                "name": "Nintendo Switch"
+            }
+        ]
     },
 
     {
-        brand: "Playstation",
-        systems: ["Playstation 1", "Playstation 2", "Playstation 3"]
-    }
+        "brand": "Sega",
+        "consoles": [
+            {
+                "name": "Dreamcast"
+            },
+            {
+                "name": "Genesis"
+            },
+        ]
+    },
+
+    {
+        "brand": "Playstation",
+        "consoles": [
+            {
+                "name": "PlayStation 1"
+            },
+            {
+                "name": "PlayStation 2"
+            },
+            {
+                "name": "PlayStation 3"
+            },
+            {
+                "name": "PlayStation 4"
+            },
+            {
+                "name": "PlayStation 5"
+            },
+        ]
+    },
+
+    {
+        "brand": "Xbox",
+        "consoles": [
+            {
+                "name": "Original Xbox"
+            },
+            {
+                "name": "Xbox 360"
+            },
+            {
+                "name": "Xbox One"
+            },
+        ]
+    },
+
+    {
+        "brand": "Miscellaneous",
+        "consoles": [
+            {
+                "name": "8BitDo",
+            },
+            {
+                "name": "Arcade Sticks",
+            }
+        ]
+    },
 ]
 
 export default data

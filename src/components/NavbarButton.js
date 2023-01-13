@@ -24,7 +24,7 @@ function NavbarButton(props) {
             <div ref={menuRef}>
                 <button className="dropdown-button" onClick={handleMenuOpen}>{props.name}</button>
                 {menuOpen ? (
-                    <Dropdownmenu/>
+                    <Dropdownmenu brand={props.name}/>
                     ) : null}
             </div>
         </div>
