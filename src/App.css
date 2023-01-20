@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,7 +35,7 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 .logo-center {
   display: block;
@@ -80,4 +80,37 @@
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.controller-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px black solid;
+  background-color: #e0dcdc;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+
+.color-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controller-colors {
+  text-align: center;
+}
+
+.card-collapse {
+  background-color: tan;
+  margin-bottom: 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }

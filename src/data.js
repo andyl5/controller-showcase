@@ -1,11 +1,15 @@
 const data = [
-
-
     {
         "brand": "Nintendo",
         "consoles": [
             {
                 "name": "Gamecube",
+                "controllers": [
+                    {
+                        "controller": "Gamecube Controller",
+                        "details": "The Gamecube Controller is for the Gamecube, released in 2001. It's considered one of the best controllers ever because of its ergonomic design and comfortability in a player's hands.",
+                    }
+                ]
             },
             {
                 "name": "Wii"
