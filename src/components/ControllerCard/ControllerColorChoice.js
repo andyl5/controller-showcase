@@ -1,22 +1,21 @@
 import React from "react"
-import gamecube_controller from "../../images/gamecube_controller.png"
+import data from '../../data';
 
 function ControllerColorChoice(props) {
-    return (
-        <div className="color-picker">
-            <p>Color: Insert Color Choice</p>
-            {/* <img src={props.image}></img> */}
 
-            {/* CENTER THE IMAGES */}
-            <div className="controller-colors">                
-                <img src={gamecube_controller} style={{width: "5%"}}></img>
-                <img src={gamecube_controller} style={{width: "5%"}}></img>
-                <img src={gamecube_controller} style={{width: "5%"}}></img>
-                <img src={gamecube_controller} style={{width: "5%"}}></img>
-                <img src={gamecube_controller} style={{width: "5%"}}></img>
-            </div>
+    // This line below is hardcoded. Please change later on
+    const colors = data[0].consoles[0].controllers[0].colors;
+
+    return Object.keys(colors).map((color, index) => {
+        const imagePath = colors[color]; 
+  
+    return (
+        <div style={{margin: "10px", backgroundColor: "teal"}}>
+            <img style={{width: "300px"}} key={index} src={imagePath} alt={`${color} Gamecube Controller`} />
+            <p style={{color: "white"}}>{Object.keys(colors)[index]}</p>
         </div>
     )
+    });
 }
 
 export default ControllerColorChoice

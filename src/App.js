@@ -5,17 +5,17 @@ import { BrowserRouter as Router, Routes, Route, Link, NavLink } from "react-rou
 
 
 import ControllerCard from './components/ControllerCard/ControllerCard';
-import Accordion from './components/ControllerCard/Accordion';
 
 function App() {
   return (
-    // <div>
-    //   <Homepage/>
-    //   {/* <ControllerCard/> */}
-    // </div>
+
     <Router>
       <Routes>
         <Route path="/" element={<Homepage/>}/>
+        <Route path="/Gamecube" element={<ControllerCard/>}/>
+
+        {/* <Route path="/:consoleName" component={<ControllerCard/>} /> */}
+        {/* Routing to each console page is incorrect so far */}
       </Routes>
     </Router>
   );
