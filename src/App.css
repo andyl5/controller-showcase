@@ -108,3 +108,22 @@ a {
   color: white;
   text-decoration: none;
 }
+
+.grid-wrapper { /* the entire grid itself. aka the board of the grid*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.grid { /* each individual grid box */
+  border: 2px black solid;
+  width: 200px;
+  height: 200px;
+}
+
+
+.grid-img {
+  width: 150px;
+  height: auto;
+}

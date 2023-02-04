@@ -1,6 +1,7 @@
 import React from "react"
 import data from "../../data"
-import data1 from "../../data"
+import data1 from "../../data1.js"
+import { Link } from 'react-router-dom';
 
 
 // This component is just an individual "box". Includes, image, h1. Image of brand/console and name of brand/console.
@@ -9,7 +10,18 @@ import data1 from "../../data"
 function GridCard(){
     
     // entry refers to either brand/console
-    const names = data.map((name.brand => <p>{name}</p>));
+    const data = 
+            data1.map(item => (
+                <Link to={`/${item.brand}`}>
+                    <div className="grid">
+                        <React.Fragment key={item.id}>
+                            <img className="grid-img" src={item.img}></img>
+                            <h1 style={{color: "black"}}>{item.brand}</h1>
+                            {/* {item.consoles && item.consoles.map(console => (<p key={console}>{console}</p>))} */}
+                        </React.Fragment>
+                    </div>
+                </Link>
+            ))
 
     return (
         <div>
@@ -18,7 +30,12 @@ function GridCard(){
                 <img></img> {/* Create map function to show the image that corresponds to where on the webpage it is at. 
                             Example: localhost:3000 should render images for the brand.
                                      localhost:3000/Nintendo should render images for Nintendo's consoles */}
-                <p>{names}</p> {/* Create map function to show the name of the key that contains the image above. 
+
+                <div className="grid-wrapper">
+                    {data}
+                </div>
+
+                <p></p> {/* Create map function to show the name of the key that contains the image above. 
                               Or this could be the image alt tag but, **no don't do that.** */}
             </div>
         </div>
