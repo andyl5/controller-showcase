@@ -3,6 +3,8 @@ import data from '../../data';
 
 function ControllerColorChoice(props) {
 
+    // **USES data FROM OLD data.js**
+
     // This line below is hardcoded. Please change later on
     const colors = data[0].consoles[0].controllers[0].colors;
 
