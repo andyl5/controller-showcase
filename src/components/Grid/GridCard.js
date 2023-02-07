@@ -48,7 +48,7 @@ function GridCard(props){
         <div>
             <Link to={`/${props.title}`}>
                 <div className="grid">
-                    <img className="grid-img" src={props.img}></img>
+                    <img className="grid-img" src={props.img} alt="img"></img>
                     <h1 style={{color: "black"}}>{props.title}</h1>
                 </div>
             </Link>
