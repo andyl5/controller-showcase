@@ -1,20 +1,16 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, NavLink, Switch, useParams } from "react-router-dom";
 
 import Homepage from './pages/Homepage';
 import BrandPage from './pages/BrandPage';
-
-import ControllerCard from './components/ControllerCard/ControllerCard';
-import GridCard from './components/Grid/GridCard';
-import ConsoleGridCard from './components/Grid/ConsoleGridCard';
 import ConsolesPage from './pages/ConsolesPage';
 
+import Console from './components/Grid/Console'
 
 const urlArray = window.location.pathname.split("/").filter(part => part !== "");
-// console.log(`/${urlArray[1]}`)
-console.log(urlArray)
-console.log("hi")
+console.log(urlArray);
+console.log("hi");
 
 
 function App() {
@@ -25,13 +21,27 @@ function App() {
       <Routes>
 
         {/* <Route path="/" element={<Homepage/>}/> */}
-      
-        {/* <Route path="/" element={<GridCard/>}/> */}
+        {/* <Route path="/" element={<BrandPage/>}/> */}
         
-        <Route path="/" element={<BrandPage/>}/>
-        <Route path={`/${urlArray[0]}`} element={<ConsolesPage brand="Nintendo"/>}/>
+        {/* <Route path={`/${urlArray[0]}`} element={<ConsolesPage brand={urlArray[0]}/>}/> */}
 
-        {/* <Route path={`/${urlArray[0]}`} element={<ConsoleGridCard brand={urlArray[0]}/>}/> */}
+        {/* <Route path={`/${urlArray[0]}`}>
+          <Route index element={<ConsolesPage brand="Nintendo"/>}/>
+          <Route path=":console" element={<Console/>}/>
+        </Route> */}
+
+
+        {/* <Route path="/Nintendo">
+          <Route index element={<ConsolesPage brand="Nintendo"/>}/>
+          <Route path=":console" element={<Console/>}/>
+        </Route> */}
+
+        <Route path="/">
+          <Route index element={<BrandPage/>}/> {/* renders the brands Nintendo, PS, Xbox, Sega  */}
+          <Route path=":brand" element={<ConsolesPage/>}> {/* this page renders the consoles, ex Gamecube Wii */}
+            {/* <Route path=":console" element={<Console/>}/> */} {/* should render controllers for a console  */}
+          </Route>
+        </Route>
 
 
         {/* Below is for rendering controllers, once you're inside a specific console */}

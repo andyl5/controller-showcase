@@ -1,7 +1,7 @@
 import React from "react"
 import data from "../../data"
 import data1 from "../../data1.js"
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 
 // This component is just an individual "box". Includes, image, h1. Image of brand/console and name of brand/console.
@@ -15,24 +15,6 @@ import { Link } from 'react-router-dom';
 // and props when mapping through the data to get what is needed.
 
 function GridCard(props){
-
-    
-    // This code below has been changed. It no longer has logic. This component just renders the title and img for each grid card
-    // const data = 
-    //         data1.map(item => (
-    //             <Link to={`/${item.brand}`}>
-    //                 <div className="grid">
-    //                     <React.Fragment key={item.id}>
-    //                         <img className="grid-img" src={item.img}></img>
-    //                         <h1 style={{color: "black"}}>{item.brand}</h1>
-    //                         {item.consoles && item.consoles.map(console => (<p style={{color: "black"}} key={console}>{console}</p>))}
-    //                     </React.Fragment>
-    //                 </div>
-    //             </Link>
-    //         ))
-
-            
-
     return (
         // Code below is not needed anymore. The notes may still be relevant.
         //     <div> {/* This div contains the image and name. Border color should be (color) 
@@ -46,7 +28,11 @@ function GridCard(props){
         //     </div>
 
         <div>
-            <Link to={`/${props.title}`}>
+            {/* FIX LINE BELOW. It should do /brand/Console. It current does /Nintendo --> /Gamecube */}
+            {/* <Link to={`/${props.title}`}> */}
+            <Link to={`${props.link}`}>
+
+
                 <div className="grid">
                     <img className="grid-img" src={props.img} alt="img"></img>
                     <h1 style={{color: "black"}}>{props.title}</h1>
